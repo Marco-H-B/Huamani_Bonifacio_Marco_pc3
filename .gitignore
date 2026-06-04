@@ -1,0 +1,35 @@
+# Compilación y builds
+build/
+cmake-build-*/
+Debug/
+Release/
+x64/
+bin/
+out/
+
+# Ejecutables y binarios
+*.exe
+*.out
+*.app
+*.o
+*.obj
+*.a
+*.so
+*.dll
+*.dylib
+*.lib
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Basura de ejecución y editores
+__pycache__/
+.pytest_cache/
+.vscode/
+.idea/
+.DS_Store
+*.log
+*.tmp
