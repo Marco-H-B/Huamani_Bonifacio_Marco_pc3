@@ -34,5 +34,5 @@ __pycache__/
 *.log
 *.tmp
 
-# Autocommit
-autocommit.md
+# autocommit
+docs/autocommit.md
