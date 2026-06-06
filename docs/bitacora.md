@@ -25,3 +25,19 @@ Cree el archivo `treap.cpp` y fui implementando funcion por funcion:
 Tambien modifique el `CMakeLists.txt` para que incluya `treap.cpp` a la hora de compilar. 
 
 Para mañana (dia 3) voy a armar los tests unitarios para asegurarme que todo ande bien, hacer la comparacion contra fuerza bruta y revisar que compile y corra todo limpio.
+
+## Dia 3 - Viernes 6 de junio
+
+Hoy me dedique a probar que todo funcione bien. Cree tres cosas nuevas:
+
+1. **Tests unitarios** (`tests/test_treap.cpp`): Tiene 8 tests con 38 verificaciones en total. Prueba insercion, duplicados, eliminacion, kth, contarMenores, arbol vacio, el ejemplo exacto de SPOJ y un test de estres con 100 elementos. Todos pasaron.
+
+2. **Fuerza bruta** (`tests/test_brute_force.cpp`): Este es el que voy a usar para el reto del video. Genera operaciones aleatorias (insert, delete, kth, count) y las ejecuta tanto en el treap como en un vector ordenado. Si ambos dan lo mismo, el treap esta bien. Probe con 5 semillas diferentes y 900 operaciones totales, 0 errores.
+
+3. **Demo interactivo** (`demos/demo_orderset.cpp`): Ejecuta paso a paso las operaciones del ejemplo de SPOJ y unas extras, mostrando el estado del treap (tamaño, elementos, raiz) despues de cada operacion.
+
+Tambien tuve que arreglar un detalle: las funciones `obtenerTam` y `actualizar` que estaban definidas en el header daban error de "multiple definition" al compilar con varios .cpp. Las marque como `inline` y se arreglo.
+
+Actualice el CMakeLists para incluir los tests con enable_testing() y add_test(), y guarde los resultados en la carpeta resultados/.
+
+Para el dia 4 me toca hacer los casos borde mas especificos y el benchmark.
