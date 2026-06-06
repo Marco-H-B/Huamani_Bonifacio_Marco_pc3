@@ -4,5 +4,5 @@ project(orderset_pc3)
 set(CMAKE_CXX_STANDARD 17)
 
 # el ejecutable principal para el problema ORDERSET
-add_executable(orderset src/main.cpp)
+add_executable(orderset src/main.cpp src/treap.cpp)
 target_include_directories(orderset PRIVATE include)
