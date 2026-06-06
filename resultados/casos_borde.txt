@@ -1,0 +1,19 @@
+=============================================
+  Fuerza bruta vs Treap - Validacion cruzada
+=============================================
+
+--- Prueba con semilla 42 ---
+  Operaciones: 200, Tamaño final: 0
+--- Prueba con semilla 123 ---
+  Operaciones: 200, Tamaño final: 6
+--- Prueba con semilla 777 ---
+  Operaciones: 200, Tamaño final: 8
+--- Prueba con semilla 2026 ---
+  Operaciones: 200, Tamaño final: 5
+--- Prueba con semilla 31415 ---
+  Operaciones: 200, Tamaño final: 1
+
+=============================================
+  Total operaciones: 900
+  RESULTADO: Todo coincide! 0 errores
+=============================================

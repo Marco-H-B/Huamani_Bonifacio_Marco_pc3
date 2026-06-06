@@ -1,0 +1,61 @@
+========================================
+  Tests unitarios del Treap - ORDERSET
+========================================
+
+--- Test: Insercion basica ---
+  [OK] Tamaño despues de insertar 3 elementos
+  [OK] Buscar 10 existe
+  [OK] Buscar 5 existe
+  [OK] Buscar 15 existe
+  [OK] Buscar 7 no existe
+
+--- Test: Duplicados ---
+  [OK] Tamaño sigue siendo 1 con duplicados
+  [OK] El 10 sigue existiendo
+
+--- Test: Eliminacion ---
+  [OK] Tamaño despues de eliminar 1
+  [OK] El 5 ya no existe
+  [OK] El 3 sigue ahi
+  [OK] El 7 sigue ahi
+  [OK] Tamaño no cambia al eliminar algo inexistente
+
+--- Test: K-esimo menor ---
+  [OK] 1er menor = 10
+  [OK] 2do menor = 20
+  [OK] 3er menor = 30
+  [OK] 4to menor = 40
+  [OK] 5to menor = 50
+
+--- Test: Contar menores ---
+  [OK] Menores que 10 = 0
+  [OK] Menores que 25 = 2 (10 y 20)
+  [OK] Menores que 50 = 4
+  [OK] Menores que 51 = 5 (todos)
+  [OK] Menores que 1 = 0 (ninguno)
+
+--- Test: Arbol vacio ---
+  [OK] Tamaño de arbol vacio = 0
+  [OK] Buscar en arbol vacio = false
+  [OK] Contar menores en arbol vacio = 0
+  [OK] Eliminar de arbol vacio no rompe nada
+
+--- Test: Ejemplo de SPOJ ---
+  [OK] Despues de I -1, I -1, I 2 -> tamaño 2
+  [OK] C 0 = 1
+  [OK] K 2 = 2
+  [OK] Despues de D -1 -> tamaño 1
+  [OK] K 1 = 2
+  [OK] K 2 con 1 elemento -> seria invalid
+
+--- Test: Estres basico (100 ops) ---
+  [OK] 100 inserciones -> tamaño 100
+  [OK] 1er menor = 0
+  [OK] 50mo menor = 49
+  [OK] 100mo menor = 99
+  [OK] Despues de eliminar pares -> 50 elementos
+  [OK] 1er menor ahora es 1
+
+========================================
+  Resultado: 38/38 tests pasados
+========================================

@@ -1,0 +1,70 @@
+==========================================
+  Demo interactivo - Treap para ORDERSET
+==========================================
+
+>> I -1 (insertar -1)
+  Tamaño: 1
+  Elementos (inorden): -1 
+  Raiz: clave=-1, prioridad=175
+
+>> I -1 (insertar -1 de nuevo, es duplicado)
+  Tamaño: 1
+  Elementos (inorden): -1 
+  Raiz: clave=-1, prioridad=175
+
+>> I 2 (insertar 2)
+  Tamaño: 2
+  Elementos (inorden): -1 2 
+  Raiz: clave=2, prioridad=400
+
+>> C 0 (contar menores que 0)
+  Resultado: 1
+
+>> K 2 (2do menor)
+  Resultado: 2
+
+>> D -1 (eliminar -1)
+  Tamaño: 1
+  Elementos (inorden): 2 
+  Raiz: clave=2, prioridad=400
+
+>> K 1 (1er menor)
+  Resultado: 2
+
+>> K 2 (2do menor)
+  Resultado: invalid
+
+==========================================
+  Operaciones adicionales
+==========================================
+
+>> Insertando: 5, 3, 7, 1, 4, 6, 9
+  Tamaño: 8
+  Elementos (inorden): 1 2 3 4 5 6 7 9 
+  Raiz: clave=3, prioridad=30056
+
+>> C 5 (cuantos menores que 5)
+  Resultado: 4
+
+>> K 4 (4to menor)
+  Resultado: 4
+
+>> D 3 (eliminar 3)
+  Tamaño: 7
+  Elementos (inorden): 1 2 4 5 6 7 9 
+  Raiz: clave=5, prioridad=17869
+
+>> D 7 (eliminar 7)
+  Tamaño: 6
+  Elementos (inorden): 1 2 4 5 6 9 
+  Raiz: clave=5, prioridad=17869
+
+>> K 1 al K 6 (todos los elementos en orden)
+  K 1 = 1
+  K 2 = 2
+  K 3 = 4
+  K 4 = 5
+  K 5 = 6
+  K 6 = 9
+
+Demo terminado.
