@@ -24,13 +24,13 @@ struct Nodo {
 };
 
 // para saber el tamaño de un subarbol sin que explote si es null
-int obtenerTam(Nodo* nodo) {
+inline int obtenerTam(Nodo* nodo) {
     if (nodo == nullptr) return 0;
     return nodo->tam;
 }
 
 // recalcula el tamaño de un nodo sumando sus hijos + 1
-void actualizar(Nodo* nodo) {
+inline void actualizar(Nodo* nodo) {
     if (nodo != nullptr) {
         nodo->tam = 1 + obtenerTam(nodo->izq) + obtenerTam(nodo->der);
     }
