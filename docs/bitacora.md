@@ -44,14 +44,11 @@ Para el dia 4 me toca hacer los casos borde mas especificos y el benchmark.
 
 ## Dia 4 - Lunes 8 de junio
 
-Hoy me dedique a probar el rendimiento del Treap y a asegurarme de que no se rompa con casos raros.
+Hoy me puse a probar el rendimiento del treap, porque SPOJ tira Time Limit Exceeded (TLE) si el codigo no es eficiente (el problema da 200,000 operaciones).
 
-1. **Casos Borde** (`tests/test_casos_borde.cpp`): Escribi pruebas especificas para ver que pasa si insertamos `INT_MAX`, `INT_MIN` o el `0`. Todo funciono perfecto. Tambien probe buscar el k-esimo con K=0 o K negativo, o K mayor al tamaño del arbol. En vez de crashear (Segmentation Fault), el codigo devuelve -1, lo cual es muy seguro. Pase los 13/13 tests de bordes.
+Cree el archivo `benchmark/benchmark.cpp`. Lo que hace es generar 200,000 operaciones aleatorias entre inserciones, eliminaciones, consultas kth y consultas count, con claves en el rango de -10^9 a 10^9 que pide SPOJ.
 
-2. **Benchmark** (`benchmark/benchmark_treap.cpp`): Simule el entorno de SPOJ generando 200,000 operaciones aleatorias gigantescas (insertar, borrar, buscar). Las medi usando `std::chrono` y el resultado me dejo sorprendido: procesar las 200,000 operaciones tomo solo **37 ms**! SPOJ suele dar entre 1 a 2 segundos de limite de tiempo, asi que mi implementacion es absurdamente rapida y pasara sobrado.
+Lo compile activando las optimizaciones de C++ (`-O3`) y el resultado me dejo re tranquilo: 200k operaciones en apenas ~40 ms (unas 5 millones de ops/s). Teniendo en cuenta que SPOJ normalmente da 1 segundo de limite, estoy sobradisimo de tiempo. Guarde la salida en `resultados/benchmark.txt` para mostrarlo en el video si me da el tiempo.
 
-Tambien añadi los nuevos ejecutables en el `CMakeLists.txt` y deje todo listo. 
-
-Por ultimo, subi la resolucion de la Actividad 5 al repo en la carpeta de actividades.
-
-Mañana (Dia 5) preparare el reporte escrito y empezare a armar el guion para el video final.
+Tambien aproveche de subir la resolucion de la Actividad 5 al repositorio de la PC3.
+Para mañana (dia 5) hare unos ultimos detalles y quiza empiece a grabar o preparar las diapositivas del video.
