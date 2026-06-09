@@ -1,0 +1,10 @@
+========================================
+  Benchmark del Treap (ORDERSET SPOJ)
+========================================
+
+Iniciando prueba con 200000 operaciones...
+  Tiempo total: 39.57 ms
+  Tamaño final del arbol: 15680
+  Operaciones por segundo: 5053734 ops/s
+
+Benchmark completado.
