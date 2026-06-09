@@ -22,3 +22,13 @@ add_test(NAME test_brute_force COMMAND test_brute_force)
 # demo interactivo
 add_executable(demo_orderset demos/demo_orderset.cpp src/treap.cpp)
 target_include_directories(demo_orderset PRIVATE include)
+
+# tests de casos borde
+add_executable(test_casos_borde tests/test_casos_borde.cpp src/treap.cpp)
+target_include_directories(test_casos_borde PRIVATE include)
+add_test(NAME test_casos_borde COMMAND test_casos_borde)
+
+# benchmark de rendimiento
+add_executable(benchmark_treap benchmark/benchmark_treap.cpp src/treap.cpp)
+target_include_directories(benchmark_treap PRIVATE include)
+add_test(NAME benchmark_treap COMMAND benchmark_treap)
