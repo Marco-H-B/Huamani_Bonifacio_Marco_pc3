@@ -52,3 +52,11 @@ Lo compile activando las optimizaciones de C++ (`-O3`) y el resultado me dejo re
 
 Tambien aproveche de subir la resolucion de la Actividad 5 al repositorio de la PC3.
 Para mañana (dia 5) hare unos ultimos detalles y quiza empiece a grabar o preparar las diapositivas del video.
+
+## Dia 5 - Martes 9 de junio
+
+Hoy dedique el dia basicamente a organizar todo el proyecto, dejarlo limpio y subir la ultima actividad.
+
+Subi al repositorio mi resolucion detallada de la Actividad 6. Tambien me asegure de que no quedara ningun archivo basura o temporal por ahi tirado (borre un par de `.txt` de los logs de errores vacios que se habian generado cuando corria los tests del treap).
+
+Aparte de eso, me pase un buen rato haciendo pruebas generales, compilando de cero todo para verificar que mis instrucciones en el `CMakeLists.txt` esten perfectas y revisando que todo este listo. Mañana (dia 6) voy a realizar la grabacion del video de sustentacion, donde voy a mostrar la solucion, correr el demo interactivo, probar la comparacion de fuerza bruta y los benchmarks para demostrar que funciona a la perfeccion.
