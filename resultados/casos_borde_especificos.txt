@@ -1,0 +1,26 @@
+========================================
+  Tests Casos Borde - Treap ORDERSET
+========================================
+
+--- Test: Numeros Extremos (Limites de int) ---
+  [PASO] Se insertaron los limites
+  [PASO] Max int encontrado
+  [PASO] Min int encontrado
+  [PASO] K-esimo 1 es Min Int
+  [PASO] K-esimo 3 es Max Int
+  [PASO] Hay 1 menor a 0
+  [PASO] Hay 2 menores al max_int
+  [PASO] No hay menores al min_int
+
+--- Test: K-esimo invalido ---
+  [PASO] K=0 se maneja de forma segura
+  [PASO] K=-5 se maneja de forma segura
+  [PASO] K=5 (mayor a tam) devuelve -1 (seguro)
+
+--- Test: Contar menores en limites ---
+  [PASO] Valor mas chico que el minimo
+  [PASO] Valor mas grande que el maximo
+
+========================================
+  Resultados Casos Borde: 13/13
+========================================

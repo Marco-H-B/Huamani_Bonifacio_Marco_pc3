@@ -27,3 +27,8 @@ target_include_directories(demo_orderset PRIVATE include)
 add_executable(benchmark_treap benchmark/benchmark.cpp src/treap.cpp)
 target_include_directories(benchmark_treap PRIVATE include)
 target_compile_options(benchmark_treap PRIVATE -O3) # compilar con optimizacion para que mida bien
+
+# test de casos borde
+add_executable(test_casos_borde tests/test_casos_borde.cpp src/treap.cpp)
+target_include_directories(test_casos_borde PRIVATE include)
+add_test(NAME test_casos_borde COMMAND test_casos_borde)
