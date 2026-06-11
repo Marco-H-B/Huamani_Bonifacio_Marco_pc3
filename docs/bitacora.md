@@ -7,6 +7,7 @@ Hoy empece con la practica. Lo primero que hice fue leer bien el problema que me
 Despues de leer un rato, decidi usar un **Treap** porque en la semana 5 y 6 vimos arboles balanceados y el treap es justo lo que necesito: un BST que se balancea solo con prioridades aleatorias. Ademas, si le agrego un campo de tamaño a cada nodo puedo hacer kth y count en O(log n).
 
 Lo que hice hoy:
+
 - Cree la estructura del repositorio (carpetas include, src, docs, tests, etc)
 - Configure el .gitignore para no subir builds ni ejecutables
 - Arme el CMakeLists.txt basico con C++17
@@ -18,11 +19,12 @@ Lo que hice hoy:
 
 Hoy me puse a programar en serio la logica del Treap.
 Cree el archivo `treap.cpp` y fui implementando funcion por funcion:
+
 - Primero hice el `split` y el `merge`, que son la base de todo. Con eso el resto es mas facil.
 - Despues agregue `insertar` y `eliminar`, usando split y merge. Me acorde de chequear si el elemento ya existia para no meter repetidos (el problema dice que es un conjunto).
 - Para responder las consultas de SPOJ implemente `kesimo` aprovechando el campo `tam` que guarda el tamaño de cada subarbol, y `contarMenores` sumando los tamaños de los hijos izquierdos cuando bajo a la derecha.
 
-Tambien modifique el `CMakeLists.txt` para que incluya `treap.cpp` a la hora de compilar. 
+Tambien modifique el `CMakeLists.txt` para que incluya `treap.cpp` a la hora de compilar.
 
 Para mañana (dia 3) voy a armar los tests unitarios para asegurarme que todo ande bien, hacer la comparacion contra fuerza bruta y revisar que compile y corra todo limpio.
 
@@ -60,3 +62,12 @@ Hoy dedique el dia basicamente a organizar todo el proyecto, dejarlo limpio y su
 Subi al repositorio mi resolucion detallada de la Actividad 6. Tambien me asegure de que no quedara ningun archivo basura o temporal por ahi tirado (borre un par de `.txt` de los logs de errores vacios que se habian generado cuando corria los tests del treap).
 
 Aparte de eso, me pase un buen rato haciendo pruebas generales, compilando de cero todo para verificar que mis instrucciones en el `CMakeLists.txt` esten perfectas y revisando que todo este listo. Mañana (dia 6) voy a realizar la grabacion del video de sustentacion, donde voy a mostrar la solucion, correr el demo interactivo, probar la comparacion de fuerza bruta y los benchmarks para demostrar que funciona a la perfeccion.
+
+## Dia 6 - Jueves 11 de junio
+
+Hoy empece a preparar todo para la grabacion del video de sustentacion. Estuve haciendo unos ultimos ajustes en el codigo fuente:
+- Pase un formateador de codigo por los archivos `treap.h`, `test_casos_borde.cpp` y `benchmark.cpp` para que todo se vea mas limpio y estandarizado en la presentacion.
+- Elimine algunos comentarios sobrantes en `demo_orderset.cpp`.
+- Hice pequeñas correcciones de formato y espacios en el documento de `respuestas_obligatorias.md`.
+
+Ya con el codigo impecable y los archivos listos, mas tarde grabare el video mostrando la solucion, el demo interactivo y las pruebas de rendimiento y fuerza bruta tal como planee.
