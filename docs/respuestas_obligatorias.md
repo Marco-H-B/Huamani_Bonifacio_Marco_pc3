@@ -30,7 +30,7 @@ Mantiene dos invariantes clave: el invariante de **Arbol Binario de Búsqueda (B
 En las funciones `split` y `merge`. Durante la recursividad, después de enlazar los hijos correspondientes, siempre se llama a la función auxiliar `actualizar(nodo)` para garantizar que el tamaño del subárbol (`tam`) no pierda consistencia.
 
 **10. ¿Qué caso borde puede romper una solución superficial?**
-Intentar eliminar un elemento de un árbol vacío, pedir el `K`-ésimo número con un `K` excesivamente grande, o pasar valores al límite de los enteros (`INT_MAX`, `INT_MIN`). 
+Intentar eliminar un elemento de un árbol vacío, pedir el `K`-ésimo número con un `K` excesivamente grande, o pasar valores al límite de los enteros (`INT_MAX`, `INT_MIN`).
 
 **11. ¿Cómo manejas duplicados, empates o elementos obsoletos?**
 SPOJ exige que la estructura sea un Set (Conjunto). Por ende, en la función `insertar`, hago primero una llamada a `buscar(raiz, val)`. Si el elemento ya existe, retorno inmediatamente para no duplicar nodos.
@@ -54,7 +54,7 @@ Podríamos usar un Árbol Rojo-Negro (Red-Black Tree) o AVL. Si bien aseguraría
 Escribí `tests/test_brute_force.cpp`, que es un validador cruzado. Compara de manera aleatoria cientos de operaciones de mi Treap contra operaciones hechas en un `std::vector` (fuerza bruta), asegurando que ninguna de mis optimizaciones rompa la lógica. Además de un benchmark de rendimiento intensivo (`benchmark.cpp`).
 
 **18. ¿Qué cambiaste durante el bloque sin cortes?**
-*(Nota para el video: Aquí debes explicar el pequeño cambio que hagas en vivo. Por ejemplo: "Agregué una pequeña validación al inicio del main para imprimir logs extra de cada inserción" o "Añadí un nuevo assert para validar punteros").*
+_(Nota para el video: Aquí debes explicar el pequeño cambio que hagas en vivo. Por ejemplo: "Agregué una pequeña validación al inicio del main para imprimir logs extra de cada inserción" o "Añadí un nuevo assert para validar punteros")._
 
 **19. ¿Cómo sabes que el cambio no rompió la solución?**
 Porque después de realizar el cambio, recompilé el proyecto limpio y ejecuté mi batería de pruebas (con CTest) como el validador de fuerza bruta, que confirmó que el núcleo de la lógica sigue inalterado.
@@ -62,16 +62,16 @@ Porque después de realizar el cambio, recompilé el proyecto limpio y ejecuté 
 **20. ¿Qué demuestra que no es una solución de caja negra?**
 Mi implementación directa del `struct Nodo` y cómo utilicé el campo `tam` para interactuar con `k` de manera recursiva (comparando `k` con `tamIzq`). No usé librerías opacas oscuras como el `<ext/pb_ds/assoc_container.hpp>` de GNU C++ o similares.
 
-
 ---
 
 ## Preguntas y Retos Específicos (Problema 12 - SPOJ ORDERSET)
 
 **1. ¿Qué significa rank(x)?**
-Para nuestro problema (que equivale a la operación `C`), significa contar cuántos elementos presentes en la estructura son estrictamente menores que el valor 'X'. 
+Para nuestro problema (que equivale a la operación `C`), significa contar cuántos elementos presentes en la estructura son estrictamente menores que el valor 'X'.
 
 **2. ¿Cómo se implementa kth sin recorrer todo el árbol?**
-Aprovechando el campo `tam` (tamaño del subárbol). Durante la recursividad, calculo cuántos nodos hay en la izquierda (`tamIzq = obtenerTam(nodo->izq)`). 
+Aprovechando el campo `tam` (tamaño del subárbol). Durante la recursividad, calculo cuántos nodos hay en la izquierda (`tamIzq = obtenerTam(nodo->izq)`).
+
 - Si `k <= tamIzq`, bajo por la izquierda.
 - Si `k == tamIzq + 1`, estoy exactamente en el nodo objetivo y devuelvo su clave.
 - Si `k` es mayor, bajo por la derecha, pero actualizando mi meta: `k = k - tamIzq - 1` para descontar los nodos que ya superé.
