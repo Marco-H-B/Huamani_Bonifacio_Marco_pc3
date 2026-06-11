@@ -3,7 +3,6 @@
 #include <cstdlib>
 
 // este demo muestra el estado del treap despues de cada operacion
-// es para entender como funciona y para el video
 
 // imprime los elementos en orden (inorder)
 void imprimirInorden(Nodo *nodo) {
