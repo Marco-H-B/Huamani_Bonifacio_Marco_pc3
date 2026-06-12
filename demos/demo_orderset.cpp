@@ -114,6 +114,9 @@ int main() {
     printf("  K %d = %d\n", i, kesimo(raiz, i));
   }
 
+  printf("\n>> Rango [2, 6] (cuantos ay entre 2 y 6)\n");
+  printf("Resultado en rango: %d\n", contarEnRango(raiz, 2, 6));
+
   printf("\nDemo terminado.\n");
   return 0;
 }

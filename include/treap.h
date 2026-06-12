@@ -60,4 +60,6 @@ int contarMenores(Nodo *nodo, int val);
 // busca si un valor ya existe en el arbol
 bool buscar(Nodo *nodo, int val);
 
+int contarEnRango(Nodo *raiz, int A, int B);
+
 #endif

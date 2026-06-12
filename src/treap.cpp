@@ -132,3 +132,10 @@ int contarMenores(Nodo *nodo, int val) {
     return contarMenores(nodo->izq, val);
   }
 }
+
+int contarEnRango(Nodo *raiz, int A, int B) {
+  int limiteSup = contarMenores(raiz, B + 1);
+  int limiteInf = contarMenores(raiz, A);
+
+  return limiteSup - limiteInf;
+}
