@@ -2,7 +2,7 @@
 
 **Alumno:** Huamani Bonifacio Marco Antonio  
 **Código:** 20232741D  
-**Curso:** CC232 - Algoritmos y Estructuras de Datos  
+**Curso:** CC232 - Algoritmos y Estructuras de Datos
 
 ---
 
@@ -12,6 +12,7 @@
 Enlace: https://www.spoj.com/problems/ORDERSET/
 
 Basicamente hay que mantener un conjunto de numeros enteros donde se pueda:
+
 - **I x**: insertar x (si no esta repetido)
 - **D x**: eliminar x (si existe)
 - **K k**: devolver el k-esimo menor elemento, o "invalid" si k es mayor que el tamaño
@@ -26,12 +27,14 @@ Las restricciones son hasta 200,000 operaciones y los valores pueden ser hasta 1
 Cada nodo guarda: clave, prioridad (random), tamaño del subarbol. Esto permite hacer las operaciones de insert, delete, kth y count en O(log n) esperado.
 
 ### Relacion con las semanas del curso:
+
 - **Semana 5**: BST, busqueda ordenada, rotaciones, arboles aumentados
 - **Semana 6**: Treap, heaps, order statistic tree
 
 ## Invariante
 
 El treap mantiene dos propiedades al mismo tiempo:
+
 1. **BST por clave**: todo lo de la izquierda es menor, todo lo de la derecha es mayor
 2. **Heap por prioridad**: la prioridad del padre siempre es >= que la de sus hijos
 
@@ -40,13 +43,13 @@ Ademas cada nodo guarda el tamaño de su subarbol (`tam`) que se actualiza despu
 ## Complejidad
 
 | Operacion | Complejidad esperada |
-|-----------|---------------------|
-| Insertar  | O(log n)            |
-| Eliminar  | O(log n)            |
-| K-esimo   | O(log n)            |
-| Contar    | O(log n)            |
-| Total     | O(Q log n)          |
-| Espacial  | O(n)                |
+| --------- | -------------------- |
+| Insertar  | O(log n)             |
+| Eliminar  | O(log n)             |
+| K-esimo   | O(log n)             |
+| Contar    | O(log n)             |
+| Total     | O(Q log n)           |
+| Espacial  | O(n)                 |
 
 ## Compilacion
 
@@ -68,6 +71,7 @@ ctest --test-dir build
 ```
 
 ## Casos borde
+
 - Consultar K cuando el conjunto esta vacio
 - Insertar un valor que ya existe (no debe duplicar)
 - Eliminar un valor que no existe (no debe hacer nada)
